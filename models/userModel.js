@@ -33,7 +33,7 @@ const userSchema=new mongoose.Schema({
             price: Number
         }
     ]
-});
+},{ timestamps: true });
 
 userSchema.pre('save',async function(next){
     const user=this;

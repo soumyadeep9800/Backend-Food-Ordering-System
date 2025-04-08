@@ -14,3 +14,24 @@ Functionality:
 • Manage Orders: Allow admins to view and manage customer orders.
 
 Endpoints:
+
+🔐 Auth Endpoints
+POST	/api/register	              Register a new user
+POST	/api/login	                  User login
+POST	/api/admin/register	          Register a new admin
+POST	/api/admin/login	          Admin login
+
+🍽 Restaurants (login required)
+GET	/api/restaurants	              Get list of all restaurants
+GET	/api/restaurants/search?query=	  Search restaurants by name
+GET	/api/restaurants/:id/menu	      Get menu of a specific restaurant
+
+🛒 Cart (login required)
+POST	/api/cart	                  Add item to cart
+GET	  /api/cart	                      View cart contents
+DELETE	/api/cart/:itemId	          Remove item from cart
+
+🛠 Admin Panel (Admin Only)
+POST	/api/admin/restaurants	      Add new restaurant
+PUT	/api/admin/restaurants/:id	      edit restaurant details
+DELETE	/api/admin/restaurants/:id	  Delete a restaurant

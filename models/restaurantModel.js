@@ -4,7 +4,8 @@ const restaurantSchema=mongoose.Schema({
     name:{
         type:String,
         required:true,
-        trim:true
+        trim:true,
+        lowercase: true
     },
     description:{
         type:String,

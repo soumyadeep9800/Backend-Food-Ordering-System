@@ -6,11 +6,8 @@ const bodyParser=require('body-parser');
 app.use(bodyParser.json());
 
 
-
-
-
-
-
+const userAuth=require('./routes/authUser');
+app.use('/',userAuth);
 
 
 

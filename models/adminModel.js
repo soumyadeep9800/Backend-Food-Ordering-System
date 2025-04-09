@@ -17,7 +17,7 @@ const adminSchema=new mongoose.Schema({
         type:String,
         required:true
     }
-},{ timestamps: true });
+},{timestamps: true});
 
 adminSchema.pre('save',async function(next){
     const admin=this;

@@ -33,7 +33,7 @@ router.post('/login',async(req,res)=>{
         }
         const token=generateToken(payload);
         console.log('login admin succesfully');
-        res.status(200).json({message:'admin login succesfully'});
+        res.status(200).json({message:'admin login succesfully',token});
     } catch (error) {
         console.log('failed to save person');
         res.status(500).json({error:'internal server error'});

@@ -9,7 +9,8 @@ const restaurantSchema=mongoose.Schema({
     },
     description:{
         type:String,
-        trim:true
+        trim:true,
+        unique:true
     },
     cuisine: {
         type: String,

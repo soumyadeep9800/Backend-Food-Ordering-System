@@ -10,7 +10,8 @@ const userAuth=require('./routes/authUser');
 app.use('/',userAuth);
 const adminAuth=require('./routes/authAdmin');
 app.use('/admin',adminAuth);
-
+const adminController=require('./routes/adminRestaurantController');
+app.use('/admin',adminController);
 
 
 

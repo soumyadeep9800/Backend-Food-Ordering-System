@@ -14,7 +14,7 @@ router.post('/signup',async(req,res)=>{
         }
         const token=generateToken(payload);
         console.log(token);
-        res.status(200).json({message:'save user succesfully'});
+        res.status(200).json({message:'save user succesfully',token});
     } catch (error) {
         console.log('failed to save person');
         res.status(500).json({error:'internal server error'});

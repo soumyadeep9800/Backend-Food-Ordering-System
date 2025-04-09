@@ -23,7 +23,7 @@ POST	/api/admin/login	          Admin login
 
 🍽 Restaurants (login required)
 GET	/api/restaurants	              Get list of all restaurants
-GET	/api/restaurants/search?query=	  Search restaurants by name
+GET	/api/restaurants/search      	  Search restaurants by name
 GET	/api/restaurants/:id/menu	      Get menu of a specific restaurant
 
 🛒 Cart (login required)

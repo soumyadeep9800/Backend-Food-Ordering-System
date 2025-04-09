@@ -7,11 +7,13 @@ app.use(bodyParser.json());
 
 
 const userAuth=require('./routes/authUser');
-app.use('/',userAuth);
+app.use('/user',userAuth);
 const adminAuth=require('./routes/authAdmin');
 app.use('/admin',adminAuth);
 const adminController=require('./routes/adminRestaurantController');
 app.use('/admin',adminController);
+const restaurantService=require('./routes/restaurantService');
+app.use('/restaurant',restaurantService);
 
 
 

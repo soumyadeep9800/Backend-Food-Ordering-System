@@ -47,4 +47,25 @@ router.delete('/restaurants/:id',jwtAuthMiddleware,async (req,res)=>{
     }
 });
 
+router.put('/restaurants/:id',jwtAuthMiddleware,async(req,res)=>{
+    try {
+        if(!await (checkAdmin(req.user.id))){
+            return res.status(403).json({message:'Access Denied! Admin only area.'});
+        }
+        const restaurantID=req.params.id;
+        const updateData=req.body;
+        const response=await Restaurant.findByIdAndUpdate(restaurantID,updateData,{
+            new:true,
+            runValidators:true
+        });
+        if(!response){
+            return res.status(404).json({message:'restaurant not found'});
+        }
+        console.log('restaurant updated succesfully');
+        res.status(200).json({message:'updated restaurant'});
+    } catch (error) {
+        console.log('failed to update restaurant',error);
+        res.status(500).json({error:'internal server error'});
+    }
+})
 module.exports=router;

@@ -39,7 +39,7 @@ router.delete('/:itemID',jwtAuthMiddleware,async(req,res)=>{
         if(!user) return res.status(404).json({message:'user not found'});
         const itemID=req.params.itemID;
         user.cart.pull({id: itemID});
-        //user.cart = user.cart.filter(item => item._id.toString() !== itemID);
+//user.cart = user.cart.filter(item => item._id.toString() !== itemID);
         await user.save();
         res.status(200).json({ message: 'Item removed from cart', cart: user.cart });
     } catch (error) {

@@ -22,9 +22,9 @@ POST	/api/admin/register	          Register a new admin
 POST	/api/admin/login	          Admin login
 
 🍽 Restaurants (login required)
-GET	/api/restaurants	              Get list of all restaurants
-GET	/api/restaurants/search      	  Search restaurants by name
-GET	/api/restaurants/:id/menu	      Get menu of a specific restaurant
+GET	/api/restaurants	                              Get list of all restaurants
+GET	/api/restaurants/searchsearch?name=domino      	  Search restaurants by name
+GET	/api/restaurants/:id/menu	                      Get menu of a specific restaurant
 
 🛒 Cart (login required)
 POST	/api/cart	                  Add item to cart

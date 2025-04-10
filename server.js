@@ -14,9 +14,8 @@ const adminController=require('./routes/adminRestaurantController');
 app.use('/admin',adminController);
 const restaurantService=require('./routes/restaurantService');
 app.use('/restaurant',restaurantService);
-
-
-
+const cartController=require('./routes/cartController');
+app.use('/cart',cartController);
 
 app.listen(port,()=>{
     console.log(`Server is running at http://localhost:${port}`);

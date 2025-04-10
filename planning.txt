@@ -2,16 +2,14 @@ Functionality:
 • User Registration: Allow users to create an account.
 • User Login: Enable users to log in to their accounts.
 • Browse Restaurants: Display a list of restaurants available for ordering.
-• Search Restaurants: Allow users to search for restaurants by name or cuisine.
+• Search Restaurants: Allow users to search for restaurants by name.
 • View Menu: Show the menu of a selected restaurant.
 • Add to Cart: Allow users to add items to their shopping cart.
 • View Cart: Display the contents of the shopping cart.
 • Remove from Cart: Allow users to remove items from the shopping cart.
-• Checkout: Enable users to place an order for the items in their shopping cart.
-• View Orders: Allow users to view their order history.
+• Checkout: Enable users to place an order for the items in their shopping cart. //due
 • Admin Login: Enable admin users to log in to the admin panel.
 • Manage Restaurants: Allow admins to add, edit, or delete restaurants.
-• Manage Orders: Allow admins to view and manage customer orders.
 
 Endpoints:
 

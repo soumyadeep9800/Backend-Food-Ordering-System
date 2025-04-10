@@ -30,5 +30,20 @@ router.get('/search', jwtAuthMiddleware, async (req, res) => {
     }
 });
 
+router.get('/:id/menu',jwtAuthMiddleware,async(req,res)=>{
+    try {
+        const restaurantID=req.params.id;
+        const response=await Restaurant.findById(restaurantID);
+        if(!response){
+            console.log('this restaurant not present');
+            return res.status(404).json({message:'this restaurant not present'});
+        }
+        console.log(response.menu);
+        res.status(200).json(response.menu);
+    } catch (error) {
+        console.log('Internal Server Error');
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
 
 module.exports=router;
